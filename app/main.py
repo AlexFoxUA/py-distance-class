@@ -51,7 +51,7 @@ class Distance:
             return self.km > other
         return NotImplemented
 
-    def __eq__(self, other: object) -> bool:
+    def __eq__(self, other: Distance | int | float) -> bool:
         if isinstance(other, Distance):
             return self.km == other.km
         if isinstance(other, (int, float)):
